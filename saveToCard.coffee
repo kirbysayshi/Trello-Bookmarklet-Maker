@@ -21,9 +21,9 @@ window.saveTrelloCard = (idList, key, token) ->
     dataType: "json"
 
   # If the browser doesn't support CORS, then use JSONP
-  if !$.support.cors
+  if !jQuery.support.cors
     opts.dataType = "jsonp"
     opts.type = "GET"
     opts.data._method = "POST"
 
-  $.ajax opts
+  jQuery.ajax opts
